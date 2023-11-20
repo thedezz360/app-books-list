@@ -1,0 +1,10 @@
+.booksContainer{
+	display: grid;
+	grid-template-columns: repeat( auto-fill, minmax(250px, 1fr) );
+	
+}
+
+.book img{
+	
+	width: 250px;
+}
