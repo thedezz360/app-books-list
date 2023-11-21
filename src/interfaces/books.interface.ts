@@ -27,7 +27,10 @@ export interface Library{
 export interface BooksContextProps{
 	booksState: BooksState,
 	bookToReadingList : (id:string)=>void,
-	bookToBooksList : (id:string)=>void
+	bookToBooksList : (id:string)=>void,
+	booksListCount : number,
+	listReadingCount: number,
+	filterByGenre: (genre:string)=>void
 }
 
 // general state of app

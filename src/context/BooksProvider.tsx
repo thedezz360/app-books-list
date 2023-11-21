@@ -1,8 +1,8 @@
-import { BooksContext } from "./BooksContext";
-import books from "../books.json";
-import {  BooksContextProps, BooksState } from "../interfaces/books.interface";
 import { useReducer } from "react";
 import { booksReducer } from "./booksReducer";
+import { BooksContext } from "./BooksContext";
+import {  BooksContextProps, BooksState } from "../interfaces/books.interface";
+import books from "../books.json";
 
 
 interface props {
@@ -29,11 +29,18 @@ export function BookProvider ({children} : props) {
 		dispatch({type:"bookToBooksList", payload: {id: id}});
 	};
 
+	const filterByGenre = (genre:string) => {
+		dispatch({type:"filterByGenre", payload: {genre:genre}});
+	};
+
 	// set contextValue
 	const contextValue: BooksContextProps ={
 		booksState,
 		bookToReadingList,
-		bookToBooksList
+		bookToBooksList,
+		booksListCount: booksState.library.length,
+		listReadingCount: booksState.listReading.length,
+		filterByGenre
 	};
 
 	return (
