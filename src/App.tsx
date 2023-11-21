@@ -1,6 +1,7 @@
 import {BooksList} from "./components/BooksList.tsx";
-import { BookProvider } from "./context/BookProvider.tsx";
+import { BookProvider } from "./context/BooksProvider.tsx";
 import "./App.css";
+import { ListReading } from "./components/ListReading.tsx";
 
 function App() {
  
@@ -10,7 +11,7 @@ function App() {
 			<div className="layout">
 				<BooksList />
 
-				<h2>ReadingList</h2>
+				<ListReading />
 
 			</div>
 		</BookProvider>

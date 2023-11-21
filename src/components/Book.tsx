@@ -6,9 +6,12 @@ interface props {
 }
 
 export function Book ({book}:props){
+
+	
+
 	return (
 		
-		<div className="book">
+		<div className="book" >
 			<img src={book.cover} alt={book.title} />
 		</div>
 

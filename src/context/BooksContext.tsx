@@ -1,7 +1,7 @@
 import { createContext } from "react";
-import {  Library } from "../interfaces/books.interface";
+import {  BooksContextProps } from "../interfaces/books.interface";
 
 
 
 // creamos el contexto con un valor predeterminado
-export const BooksContext = createContext<Library>({} as Library);
+export const BooksContext = createContext<BooksContextProps>({} as BooksContextProps);

@@ -3,15 +3,19 @@ import { Book } from "./Book";
 
 
 export function BooksList() {
-	const {library} = useBooksContext();
-	console.log(library);
+	const {booksState, bookToReadingList} = useBooksContext();
+	const {library} = booksState;
+	//console.log(booksState);
 	return (
-		<div>
+		<div className="container">
 			<h1>BooksList</h1>
 			<div className="booksContainer">
 				{
-					library.map((libraryItem, index) => (
-						<Book key={index} book={libraryItem.book}  />
+					library.map((libraryItem) => (
+						<span key={libraryItem.book.ISBN} onClick={()=>{bookToReadingList(libraryItem.book.ISBN);}} >
+							<Book  book={libraryItem.book}  />
+
+						</span>
 
 					))
 				}

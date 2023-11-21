@@ -23,3 +23,16 @@ export interface Library{
 }
 
 
+// props of booksContext
+export interface BooksContextProps{
+	booksState: BooksState,
+	bookToReadingList : (id:string)=>void,
+	bookToBooksList : (id:string)=>void
+}
+
+// general state of app
+export interface BooksState{
+	library: LibraryItem[],
+	listReading: LibraryItem[]
+}
+
