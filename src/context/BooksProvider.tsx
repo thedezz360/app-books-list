@@ -29,9 +29,7 @@ export function BookProvider ({children} : props) {
 		dispatch({type:"bookToBooksList", payload: {id: id}});
 	};
 
-	const filterByGenre = (genre:string) => {
-		dispatch({type:"filterByGenre", payload: {genre:genre}});
-	};
+
 
 	// set contextValue
 	const contextValue: BooksContextProps ={
@@ -40,7 +38,7 @@ export function BookProvider ({children} : props) {
 		bookToBooksList,
 		booksListCount: booksState.library.length,
 		listReadingCount: booksState.listReading.length,
-		filterByGenre
+		
 	};
 
 	return (

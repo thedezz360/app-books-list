@@ -30,7 +30,7 @@ export interface BooksContextProps{
 	bookToBooksList : (id:string)=>void,
 	booksListCount : number,
 	listReadingCount: number,
-	filterByGenre: (genre:string)=>void
+	
 }
 
 // general state of app

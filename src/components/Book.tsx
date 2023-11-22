@@ -2,16 +2,17 @@ import { Book } from "../interfaces/books.interface";
 import "./book.css";
 
 interface props {
-	book:Book
+	book:Book,
+	position:string
 }
 
-export function Book ({book}:props){
+export function Book ({book, position}:props){
 
 	
 
 	return (
 		
-		<div className="book" >
+		<div className={`book ${position}` } >
 			<img src={book.cover} alt={book.title} />
 		</div>
 

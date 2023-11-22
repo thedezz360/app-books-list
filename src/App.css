@@ -1,8 +1,18 @@
 .layout{
 	display: grid;
-	grid-template-columns: 70% 30%;
+	grid-template-columns: auto 300px;
 }
 
 .container{
 	padding: 1rem;
 }
+
+.ml-1{margin-left: 1rem;}
+.ml-2{
+	margin-left: 2rem;
+}
+
+.w-200{
+	width: 200px;
+}
+
